@@ -191,14 +191,14 @@ const FacultyDepartments: React.FC = () => {
                       <div className="flex flex-col lg:flex-row gap-6 items-start">
                         {/* Image section */}
                         <div className="w-full lg:w-1/3">
-                          <img src={imgSrc} alt={dept.name} className="w-full h-64 object-cover rounded-xl shadow-lg" />
+                          <Image src={imgSrc} alt={dept.name} width={400} height={256} className="w-full h-64 object-cover rounded-xl shadow-lg" />
                         </div>
                         {/* Content section */}
                         <div className="w-full lg:w-2/3 flex flex-col">
                           <span className="text-sm text-gray-500 tracking-wide mb-0">Department of</span>
                           <h3 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#0d5189] to-red-500  bg-clip-text text-transparent mb-4">{dept.name}</h3>
-                          {(dept as any).description && (
-                            <p className="text-gray-700 text-base mb-6 leading-relaxed">{(dept as any).description}</p>
+                          {(dept as { description?: string }).description && (
+                                                        <p className="text-gray-700 leading-relaxed text-base">{(dept as { description?: string }).description}</p>
                           )}
                           <div className="mb-6">
                             <h4 className="text-lg font-semibold text-theme-blue mb-3">Programs Offered:</h4>
@@ -252,7 +252,7 @@ const FacultyDepartments: React.FC = () => {
                       >
                         {/* Card image - less height, full width */}
                         <div className="w-full h-32 overflow-hidden flex items-center justify-center">
-                          <img src={imgSrc} alt={dept.name} className="w-full h-full object-cover rounded-t-xl shadow-lg border-2 border-white" />
+                          <Image src={imgSrc} alt={dept.name} width={400} height={128} className="w-full h-full object-cover rounded-t-xl shadow-lg border-2 border-white" />
                         </div>
                         <div className="w-full flex flex-col items-start px-6 py-4 flex-grow">
                           <span className="text-xs text-gray-500 tracking-wide">Department of</span>

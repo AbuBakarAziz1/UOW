@@ -6,14 +6,14 @@ import React from "react";
 export default function footer() {
     return (
         <>
-           
+
             {/* Footer */}
-            <footer className="bg-white dark:bg-gray-900 border-t-2 border-orange-600 relative overflow-hidden layer-overlay" style={{ backgroundImage: 'url(theme/images/footerBackground.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <footer className="bg-gray-900 border-t-2 border-orange-600 relative overflow-hidden layer-overlay" style={{ backgroundImage: 'url(theme/images/footerBackground.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="absolute inset-0 bg-black bg-opacity-50 mix-blend-multiply -z-10"></div>
                 <div className="mx-auto max-w-screen-xl px-4 pt-6 pb-4 sm:px-6 lg:px-8 lg:pt-12 ">
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
                         <div>
-                            <div className="flex justify-center text-teal-600 sm:justify-start dark:text-teal-300">
+                            <div className="flex justify-center text-teal-300 sm:justify-start">
                                 <Image src="/theme/images/uwfooterlogo.png"
                                     alt="Logo"
                                     width={240}
@@ -23,7 +23,7 @@ export default function footer() {
                             </div>
 
                             <p
-                                className="mt-4 max-w-md text-center text-sm leading-relaxed text-gray-500 sm:max-w-xs sm:text-left dark:text-gray-400"
+                                className="mt-4 max-w-md text-center text-sm leading-relaxed text-gray-400 sm:max-w-xs sm:text-left"
                             >
                                 The University of Wah (UW) is a private-sector higher education institution founded with the vision of achieving excellence in unbiased dissemination of quality education to all.
                             </p>
@@ -32,7 +32,7 @@ export default function footer() {
                                 <ul className="mt-8 space-y-4 text-sm">
                                     <li>
                                         <a
-                                            className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end text-gray-700 dark:text-gray-400 hover:text-white transition"
+                                            className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end text-gray-400 hover:text-white transition"
                                             href="mailto:info@uow.edu.pk"
                                         >
                                             <svg
@@ -56,7 +56,7 @@ export default function footer() {
 
                                     <li>
                                         <a
-                                            className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end text-gray-700 dark:text-gray-400 hover:text-white transition"
+                                            className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end text-gray-400 hover:text-white transition"
                                             href="tel:+92519157000"
                                         >
                                             <svg
@@ -102,7 +102,7 @@ export default function footer() {
                                             href="https://maps.google.com/?q=Quaid+Avenue,+Wah+Cantt-47040"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 text-gray-700 dark:text-gray-400 hover:text-white transition not-italic"
+                                            className="flex-1 text-gray-400 hover:text-white transition not-italic"
                                         >
                                             University of Wah, Quaid Avenue, Wah Cantt, Pakistan
                                         </a>
@@ -121,7 +121,7 @@ export default function footer() {
                                 <ul className="mt-8 space-y-4 text-xs">
                                     <li className="relative group">
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-300 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="text-gray-300 transition hover:text-theme-orange"
                                             href="https://mdc.uow.edu.pk"
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -130,14 +130,14 @@ export default function footer() {
                                         </a>
                                         {/* Tooltip preview on hover or focus */}
                                         <div className="absolute left-1/2 z-50 invisible group-hover:visible group-focus-within:visible group-hover:flex group-focus-within:flex flex-col items-center w-80 -translate-x-1/2 mt-2">
-                                            <div className="bg-white dark:bg-gray-900 border border-theme-orange rounded-lg shadow-lg p-4 text-xs text-gray-700 dark:text-gray-300">
+                                            <div className="bg-gray-900 border border-theme-orange rounded-lg shadow-lg p-4 text-xs text-gray-300">
                                                 <div className="font-bold mb-2">Mashal Degree College (MDC)</div>
                                                 <div className="mb-2">Preview of <span className="text-theme-orange">mdc.uow.edu.pk</span></div>
                                                 {/* <iframe
-                            src="https://mdc.uow.edu.pk"
-                            title="MDC Preview"
-                            className="w-full h-32 rounded border border-gray-200 mb-2"
-                          /> */}
+                                                    src="https://mdc.uow.edu.pk"
+                                                    title="MDC Preview"
+                                                    className="w-full h-32 rounded border border-gray-200 mb-2"
+                                                /> */}
                                                 <a
                                                     href="https://mdc.uow.edu.pk"
                                                     target="_blank"
@@ -152,7 +152,7 @@ export default function footer() {
 
                                     <li className="relative group">
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-300 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="transition text-gray-300 hover:text-theme-orange"
                                             href="https://www.wecuw.edu.pk/"
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -161,14 +161,10 @@ export default function footer() {
                                         </a>
                                         {/* Tooltip preview on hover or focus */}
                                         <div className="absolute left-1/2 z-50 invisible group-hover:visible group-focus-within:visible group-hover:flex group-focus-within:flex flex-col items-center w-80 -translate-x-1/2 mt-2">
-                                            <div className="bg-white dark:bg-gray-900 border border-theme-orange rounded-lg shadow-lg p-4 text-xs text-gray-700 dark:text-gray-300">
+                                            <div className="bg-gray-900 border border-theme-orange rounded-lg shadow-lg p-4 text-xs text-gray-300">
                                                 <div className="font-bold mb-2">Wah Engineering College (WEC)</div>
                                                 <div className="mb-2">Preview of <span className="text-theme-orange">wec.uow.edu.pk</span></div>
-                                                {/* <iframe
-                            src="https://www.wecuw.edu.pk/"
-                            title="WEC Preview"
-                            className="w-full h-32 rounded border border-gray-200 mb-2"
-                          /> */}
+
                                                 <a
                                                     href="https://www.wecuw.edu.pk/"
                                                     target="_blank"
@@ -189,7 +185,7 @@ export default function footer() {
                                 <ul className="mt-8 space-y-4 text-xs">
                                     <li>
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-300 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="text-gray-300 transition hover:text-theme-orange"
                                             href="#"
                                         >
                                             Government of Punjab (GOP)
@@ -198,7 +194,7 @@ export default function footer() {
 
                                     <li>
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-300 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="text-gray-300 transition hover:text-theme-orange"
                                             href="#"
                                         >
                                             Higher Education Commission (HEC)
@@ -207,7 +203,7 @@ export default function footer() {
 
                                     <li>
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-300 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="text-gray-300 transition hover:text-theme-orange"
                                             href="#"
                                         >
                                             Punjab Higher Education Commission (PHEC)
@@ -221,7 +217,7 @@ export default function footer() {
                                 <ul className="mt-8 space-y-4 text-xs">
                                     <li>
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-300 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="text-gray-300 transition hover:text-theme-orange"
                                             href="https://drive.google.com/open?id=1wzw1dDLXoilT6Lr86bBfXr0SncJbHSWn" target="_blank" rel="noopener noreferrer"
                                         >
                                             Harassment at Workplace
@@ -230,7 +226,7 @@ export default function footer() {
 
                                     <li>
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-300 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="text-gray-300 transition hover:text-theme-orange"
                                             href="https://drive.google.com/file/d/1zHIMvBuK7mdslmcOLM0VaQS9p4Xp67-K/view" target="_blank" rel="noopener noreferrer"
                                         >
                                             Drugs and Tobacco Control
@@ -239,7 +235,7 @@ export default function footer() {
 
                                     <li>
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-300 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="text-gray-300 transition hover:text-theme-orange"
                                             href="https://drive.google.com/file/d/11q8HQuQmOi6I1AO-Mo41NTnoUn2BtxkM/view" target="_blank" rel="noopener noreferrer"
                                         >
                                             Anti-Plagiarism
@@ -248,7 +244,7 @@ export default function footer() {
 
                                     <li>
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-300 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="text-gray-300 transition hover:text-theme-orange"
                                             href="https://drive.google.com/file/d/1pJBXmiADRbRi_q9q0SQ6fQCwP-IDcJD7/view" target="_blank" rel="noopener noreferrer"
                                         >
                                             Students with Disabilities
@@ -263,7 +259,7 @@ export default function footer() {
                                 <ul className="mt-8 space-y-4 text-xs">
                                     <li>
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-400 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="text-gray-400 transition hover:text-theme-orange"
                                             href="#"
                                         >
                                             AVICENNA (In Campus)
@@ -271,7 +267,7 @@ export default function footer() {
                                     </li>
                                     <li className="mb-6">
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-400 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="transition text-gray-400 hover:text-theme-orange"
                                             href="#"
                                         >
                                             AVICENNA (Off Campus)
@@ -280,7 +276,7 @@ export default function footer() {
 
                                     <li>
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-400 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="text-gray-400 transition hover:text-theme-orange"
                                             href="#"
                                         >
                                             UW MIS (In Campus)
@@ -289,7 +285,7 @@ export default function footer() {
 
                                     <li>
                                         <a
-                                            className="text-gray-700 transition dark:text-gray-400 dark:hover:text-white/75 hover:text-theme-orange"
+                                            className="transition text-gray-400 hover:text-theme-orange"
                                             href="#"
                                         >
                                             UW MIS (Off Campus)
@@ -304,34 +300,34 @@ export default function footer() {
                     </div>
 
 
-                    <div className="mt-6 border-gray-100 pt-10 dark:border-gray-800 mb-4">
+                    <div className="mt-6 pt-10 border-gray-800 mb-4">
                         <div className="text-center sm:flex sm:justify-between sm:text-left">
                             <ul className="mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">
                                 <li>
-                                    <a href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400 hover:text-theme-orange">
+                                    <a href="#" className="transition hover:opacity-75 text-gray-400 hover:text-theme-orange">
                                         Terms & Conditions
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400 hover:text-theme-orange">
+                                    <a href="#" className="transition hover:opacity-75 text-gray-400 hover:text-theme-orange">
                                         Privacy Policy
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400 hover:text-theme-orange">
+                                    <a href="#" className="transition hover:opacity-75 text-gray-400 hover:text-theme-orange">
                                         Disclaimer
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400 hover:text-theme-orange">
+                                    <a href="#" className="transition hover:opacity-75 text-gray-400 hover:text-theme-orange">
                                         Copyright Notice
                                     </a>
                                 </li>
                             </ul>
-                            <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0 dark:text-gray-400">
+                            <p className="mt-4 text-sm sm:order-first sm:mt-0 text-gray-400">
                                 &copy; {new Date().getFullYear()} <Link href="/" className="text-blue-500 hover:text-blue-400">University of Wah.</Link> All rights reserved.
                             </p>
                         </div>
@@ -358,7 +354,7 @@ export default function footer() {
                             <a
                                 key={i}
                                 href="#!"
-                                className="rounded-full p-3 transition text-gray-700 dark:text-gray-400 hover:text-theme-orange dark:hover:text-white/75"
+                                className="rounded-full p-3 transition text-gray-400 hover:text-theme-orange"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

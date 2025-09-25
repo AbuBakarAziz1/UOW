@@ -75,12 +75,12 @@ export default function Carousel() {
 
       {/* Indicators at center-right */}
       <div className="absolute top-1/2 right-2 -translate-y-1/2 flex flex-col space-y-2 z-20">
-        {images.map((_, index) => (
+        {images.map((_, _index) => (
           <button
-            key={index}
-            onClick={() => goToSlide(index)}
+            key={_index}
+            onClick={() => goToSlide(_index)}
             className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
-              index === currentIndex ? "bg-blue-500" : "bg-blue-500/50"
+              _index === currentIndex ? "bg-blue-500" : "bg-blue-500/50"
             }`}
           />
         ))}

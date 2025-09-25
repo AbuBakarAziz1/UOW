@@ -1,6 +1,6 @@
 "use client";
 import InnerPageLayout from "../../components/InnerPageLayout";
-import { FaCalendarAlt, FaGraduationCap, FaClock, FaExclamationCircle } from "react-icons/fa";
+import { FaCalendarAlt, FaGraduationCap, FaExclamationCircle } from "react-icons/fa";
 
 export default function ApplicationPage() {
   return (

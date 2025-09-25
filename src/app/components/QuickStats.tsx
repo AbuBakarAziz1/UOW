@@ -44,6 +44,35 @@ function useCountUp(target: number, duration: number) {
     return count;
 }
 
+// Separate component for each stat to avoid React Hook issues
+interface StatItemProps {
+    stat: Stat;
+    index: number;
+    inView: boolean;
+}
+
+const StatItem: React.FC<StatItemProps> = ({ stat, index, inView }) => {
+    const count = useCountUp(inView ? stat.value : 0, 1200 + index * 200);
+    const Icon = statIcons[stat.label as keyof typeof statIcons];
+    const color = statColors[index % statColors.length];
+    
+    return (
+        <div
+            className={`rounded-xl shadow-lg p-4 sm:p-6 bg-gradient-to-br ${color} transition-transform duration-700 hover:scale-105 flex flex-col items-center justify-center min-h-[120px] sm:min-h-[150px]`}
+        >
+            <div className="mb-2 animate-fade-in">
+                <Icon className="text-2xl sm:text-3xl md:text-4xl mb-1 drop-shadow-lg" />
+            </div>
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 animate-fade-in">
+                {count.toLocaleString()}
+            </div>
+            <div className="text-xs sm:text-sm font-medium uppercase tracking-wide animate-fade-in">
+                {stat.label}
+            </div>
+        </div>
+    );
+};
+
 const QuickStats: React.FC = () => {
     const [inView, ref] = useInView({ threshold: 0.3 });
     return (
@@ -55,27 +84,9 @@ const QuickStats: React.FC = () => {
                 </h2>
             </div>
             <div className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 text-center justify-center px-2">
-                {stats.map((stat, i) => {
-                    const count = useCountUp(inView ? stat.value : 0, 1200 + i * 200);
-                    const Icon = statIcons[stat.label as keyof typeof statIcons];
-                    const color = statColors[i % statColors.length];
-                    return (
-                        <div
-                            key={stat.label}
-                            className={`rounded-xl shadow-lg p-4 sm:p-6 bg-gradient-to-br ${color} transition-transform duration-700 hover:scale-105 flex flex-col items-center justify-center min-h-[120px] sm:min-h-[150px]`}
-                        >
-                            <div className="mb-2 animate-fade-in">
-                                <Icon className="text-2xl sm:text-3xl md:text-4xl mb-1 drop-shadow-lg" />
-                            </div>
-                            <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 animate-fade-in">
-                                {count.toLocaleString()}
-                            </div>
-                            <div className="text-xs sm:text-sm font-medium uppercase tracking-wide animate-fade-in">
-                                {stat.label}
-                            </div>
-                        </div>
-                    );
-                })}
+                {stats.map((stat, i) => (
+                    <StatItem key={stat.label} stat={stat} index={i} inView={inView} />
+                ))}
             </div>
         </section>
     );

@@ -55,7 +55,7 @@ const MasonryFacilities: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-theme-blue mb-8 text-center">Campus <span className="text-theme-orange">Facilities</span></h2>
         <div className="columns-1 sm:columns-2 md:columns-3 gap-6 [column-fill:_balance]">
           <div className="w-full flex flex-col gap-6">
-            {facilities.map((facility, i) => {
+            {facilities.map((facility) => {
               const Icon = facility.icon;
               return (
                 <div

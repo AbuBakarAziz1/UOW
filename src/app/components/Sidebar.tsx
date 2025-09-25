@@ -129,7 +129,7 @@ const Sidebar: React.FC<SidebarProps> = ({ section }) => {
       {/* Navigation Links */}
       <div className="p-3 mb-4">
         <nav className="space-y-1">
-          {sectionData.links.map((link, index) => {
+          {sectionData.links.map((link) => {
             const LinkIcon = link.icon;
             const isActive = pathname === link.href;
             

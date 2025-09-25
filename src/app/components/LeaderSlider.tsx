@@ -113,7 +113,7 @@ const LeaderSlider: React.FC = () => {
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
-            {leaders.map((leader, idx) => (
+            {leaders.map((leader) => (
               <div
                 key={leader.name}
                 className="w-full flex-shrink-0 px-2"
