@@ -5,6 +5,21 @@
   --foreground: #171717;
 }
 
+.bg-theme-blue { background-color: #0d5189 !important; }
+.bg-theme-orange { background-color: #fc9928 !important; }
+.text-theme-blue { color: #0d5189 !important; }
+.text-theme-orange { color: #fc9928 !important; }
+.border-theme-blue { border-color: #0d5189 !important; }
+.border-theme-orange { border-color: #fc9928 !important; }
+
+/* Theme color hover utilities */
+.hover\:text-theme-orange:hover { color: #fc9928 !important; }
+.hover\:text-theme-blue:hover { color: #0d5189 !important; }
+.hover\:bg-theme-orange:hover { background-color: #fc9928 !important; }
+.hover\:bg-theme-blue:hover { background-color: #0d5189 !important; }
+.hover\:border-theme-orange:hover { border-color: #fc9928 !important; }
+.hover\:border-theme-blue:hover { border-color: #0d5189 !important; }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -16,11 +31,101 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --white: #fff;
   }
 }
 
+html, body {
+  overflow-x: hidden; /* 🚀 Prevent horizontal scrollbar */
+}
+
+/* Hide scrollbar while keeping scrollable functionality */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--white);
+  color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.layer-overlay {
+  position: relative;
+  z-index: 0;
+}
+.layer-overlay::before {
+  content: " ";
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.8) none repeat scroll 0 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.layer-overlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.animate-slide-in-right {
+  animation: slide-in-right 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes liftAndReappear {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hover-lift-reappear {
+  display: inline-block; /* required for transforms */
+}
+
+.hover-lift-reappear:hover {
+  animation: liftAndReappear 0.6s ease-in-out;
+}
+
+@keyframes marquee-ticker {
+  0% {
+    transform: translateX(0); /* Start at normal position */
+  }
+  100% {
+    transform: translateX(-50%); /* Move half its width left (since we duplicated text) */
+  }
+}
+
+.animate-marquee-ticker {
+  display: inline-flex;
+  width: max-content; /* needed for measuring content width */
+  animation: marquee-ticker 15s linear infinite;
+}
+
+.animate-marquee-ticker:hover {
+  animation-play-state: paused;
 }
