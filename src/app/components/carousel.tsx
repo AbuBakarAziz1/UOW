@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Carousel() {
   const images = [
@@ -56,11 +57,18 @@ export default function Carousel() {
               }}
             />
 
-            <img
+            <Image
+              src={item.src}
+              alt={`Slide ${index + 1}`}
+              fill
+              className="object-cover sm:object-contain"
+              priority={index === 0}
+            />
+            {/* <img
               src={item.src}
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover sm:object-contain"
-            />
+            /> */}
           </div>
         ))}
       </div>
