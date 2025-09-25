@@ -1,6 +1,5 @@
 "use client";
 
-import { FiChevronRight } from "react-icons/fi";
 import Carousel from "./components/carousel";
 import Link from "next/link";
 import { FaBullhorn } from "react-icons/fa6";

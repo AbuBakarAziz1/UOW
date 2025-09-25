@@ -64,11 +64,6 @@ export default function Carousel() {
               className="object-cover sm:object-contain"
               priority={index === 0}
             />
-            {/* <img
-              src={item.src}
-              alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover sm:object-contain"
-            /> */}
           </div>
         ))}
       </div>
