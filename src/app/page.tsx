@@ -10,10 +10,35 @@ import MasonryFacilities from "./components/MasonryFacilities";
 import LeaderSlider from "./components/LeaderSlider";
 import FacultyDepartments from "./components/FacultyDepartments";
 import Events from "./components/Events";
+import WelcomeModal from "./components/WelcomeModal";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [showWelcomeModal, setShowWelcomeModal] = useState(false);
+
+  useEffect(() => {
+    // Check if user has already seen the modal
+    const hasSeenModal = localStorage.getItem('uw-welcome-modal-dismissed');
+    
+    // Show modal only if user hasn't dismissed it before
+    if (!hasSeenModal) {
+      // Delay showing modal slightly to allow page to load
+      const timer = setTimeout(() => {
+        setShowWelcomeModal(true);
+      }, 400); // 1.5 second delay
+      
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleCloseModal = () => {
+    setShowWelcomeModal(false);
+  };
   return (
     <div className="relative">
+      {/* Welcome Modal */}
+      <WelcomeModal isOpen={showWelcomeModal} onClose={handleCloseModal} />
+      
       {/* Sliding notification bar */}
       <div className="absolute top-0 left-0 w-full z-30 overflow-hidden">
         <div className="bg-red-700 text-white py-1 px-6 text-sm font-bold">
@@ -53,7 +78,7 @@ export default function Home() {
       </div>
 
       <div
-        className=" relative w-full overflow-hidden bg-gray-200 h-auto md:h-[calc(100vh-20vh)]" >
+        className="relative w-full overflow-hidden bg-gray-200 h-[45vh] sm:h-[70vh] md:h-[calc(100vh-20vh)]" >
         <Carousel />
       </div>
 
@@ -141,6 +166,21 @@ export default function Home() {
       </div>
 
       <FacultyDepartments />
+
+       {/* Google Maps Location */}
+        <div className="w-full mx-auto flex justify-center pt-1 pb-2 bg-white ">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.697223046789!2d72.7883345751233!3d33.742644673275045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfa6bade019e11%3A0x5eac7be020a9f19c!2sUniversity%20of%20Wah!5e0!3m2!1sen!2s!4v1758275029957!5m2!1sen!2s"
+            height="250"
+            width="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="University of Wah Location"
+            className="rounded-lg shadow-lg border-t border-red-500 w-full mx-4 "
+          />
+        </div>
     </div>
   );
 }

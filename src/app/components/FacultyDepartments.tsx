@@ -250,9 +250,9 @@ const FacultyDepartments: React.FC = () => {
                           minHeight: '400px' 
                         }}
                       >
-                        {/* Card image - less height, full width */}
-                        <div className="w-full h-32 overflow-hidden flex items-center justify-center">
-                          <Image src={imgSrc} alt={dept.name} width={400} height={128} className="w-full h-full object-cover rounded-t-xl shadow-lg border-2 border-white" />
+                        {/* Card image - full width, natural height */}
+                        <div className="w-full overflow-hidden flex items-center justify-center">
+                          <Image src={imgSrc} alt={dept.name} width={400} height={140} className="w-full h-auto object-contain lg:object-cover rounded-t-xl shadow-lg border-2 border-white" />
                         </div>
                         <div className="w-full flex flex-col items-start px-6 py-4 flex-grow">
                           <span className="text-xs text-gray-500 tracking-wide">Department of</span>

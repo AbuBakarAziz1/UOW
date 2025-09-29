@@ -63,7 +63,7 @@ const MasonryFacilities: React.FC = () => {
                   className="break-inside-avoid rounded-xl shadow-lg bg-gradient-to-br from-blue-100 via-orange-50 to-orange-100 p-6 mb-6 flex flex-col gap-3 hover:scale-105 transition-transform duration-300 border-2 border-orange-100"
                   style={{ boxShadow: "0 8px 32px 0 rgba(0,0,0,0.08)" }}
                 >
-                  <span className="text-4xl text-theme-orange mb-2 drop-shadow-lg bg-white/60 rounded-full p-3 w-fit mx-auto">
+                  <span className="text-4xl text-theme-blue mb-2 drop-shadow-lg bg-white/60 rounded-full p-3 w-fit mx-auto">
                     <Icon />
                   </span>
                   <h3 className="text-lg font-bold text-theme-blue mb-1 text-center tracking-wide">

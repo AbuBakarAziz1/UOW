@@ -118,9 +118,9 @@ const LeaderSlider: React.FC = () => {
                 key={leader.name}
                 className="w-full flex-shrink-0 px-2"
               >
-                <div className="bg-white rounded-2xl shadow-xl p-0 md:p-0 border border-orange-100 flex flex-col md:flex-row items-stretch justify-center gap-0 min-h-[340px] overflow-hidden">
-                  <div className="w-full md:w-1/3 h-48 md:h-auto relative">
-                    <Image src={leader.image} alt={leader.name} fill className="object-cover w-full h-full" />
+                <div className="bg-white rounded-2xl shadow-xl p-0 md:p-0 border border-orange-100 flex flex-col md:flex-row items-stretch justify-center gap-0 md:min-h-[340px] overflow-hidden relative">
+                  <div className="w-full md:w-1/3 relative">
+                    <Image src={leader.image} alt={leader.name} width={400} height={300} className="object-cover w-full h-auto md:h-full md:object-cover" />
                   </div>
                   <div className="w-full md:w-2/3 flex flex-col justify-center items-start text-left p-6 md:p-10">
                     <h3 className="text-xl md:text-2xl font-bold text-theme-blue mb-2">{leader.name}</h3>
@@ -136,19 +136,20 @@ const LeaderSlider: React.FC = () => {
                       Read More <FaArrowRight className="text-xs" />
                     </Link>
                   </div>
+                  
+                  {/* Slider indicators - moved inside the card */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-row gap-2 z-10">
+                    {leaders.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => goTo(idx)}
+                        className={`w-3 h-3 rounded-full border-0 transition-colors ${current === idx ? "bg-theme-orange" : "bg-orange-200"}`}
+                        aria-label={`Go to ${leaders[idx].title}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-          {/* Slider indicators */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-row gap-2">
-            {leaders.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => goTo(idx)}
-                className={`w-3 h-3 rounded-full border-0 transition-colors ${current === idx ? "bg-theme-orange" : "bg-orange-200"}`}
-                aria-label={`Go to ${leaders[idx].title}`}
-              />
             ))}
           </div>
         </div>

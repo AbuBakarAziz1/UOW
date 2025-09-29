@@ -83,7 +83,7 @@ const QuickStats: React.FC = () => {
                     Quick <span className="text-red-500">Stats</span>
                 </h2>
             </div>
-            <div className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 text-center justify-center px-2">
+            <div className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 text-center justify-center px-4 md:px-2">
                 {stats.map((stat, i) => (
                     <StatItem key={stat.label} stat={stat} index={i} inView={inView} />
                 ))}

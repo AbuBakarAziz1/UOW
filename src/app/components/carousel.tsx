@@ -40,7 +40,7 @@ export default function Carousel() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-gray-200 h-full mt-6">
+    <div className="relative w-full overflow-hidden bg-gray-200 h-full md:mt-6">
       {/* Carousel container */}
       <div
         className="flex transition-transform duration-1000 ease-in-out h-full"
@@ -48,12 +48,12 @@ export default function Carousel() {
       >
         {images.map((item, index) => (
           <div key={index} className="w-full flex-shrink-0 h-full relative">
-            {/* Gradient mask */}
+            {/* Gradient mask - lighter on mobile for better visibility */}
             <div
               className="absolute inset-0 z-10 pointer-events-none"
               style={{
                 background:
-                  "linear-gradient(to right, rgba(229,231,235,1) 0%, rgba(229,231,235,0) 10%, rgba(229,231,235,0) 90%, rgba(229,231,235,1) 100%)",
+                  "linear-gradient(to right, rgba(229,231,235,0.3) 0%, rgba(229,231,235,0) 10%, rgba(229,231,235,0) 90%, rgba(229,231,235,0.3) 100%)",
               }}
             />
 
@@ -61,15 +61,16 @@ export default function Carousel() {
               src={item.src}
               alt={`Slide ${index + 1}`}
               fill
-              className="object-cover sm:object-contain"
+              className="object-contain"
               priority={index === 0}
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 100vw, 100vw"
             />
           </div>
         ))}
       </div>
 
       {/* Caption overlay */}
-      <div className="absolute bottom-4 lg:bottom-12 right-4 bg-black/60 text-white px-4 py-2 rounded-md text-xs sm:text-sm z-20 max-w-[90vw] sm:max-w-[70vw] md:max-w-[50vw] text-center transition-opacity duration-500">
+      <div className="absolute bottom-5 lg:bottom-12 right-4 bg-black/60 text-white px-4 py-2 rounded-md text-xs sm:text-sm z-20 max-w-[90vw] sm:max-w-[70vw] md:max-w-[50vw] text-center transition-opacity duration-500">
         {images[currentIndex].caption}
       </div>
 
@@ -79,9 +80,8 @@ export default function Carousel() {
           <button
             key={_index}
             onClick={() => goToSlide(_index)}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
-              _index === currentIndex ? "bg-blue-500" : "bg-blue-500/50"
-            }`}
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${_index === currentIndex ? "bg-blue-500" : "bg-blue-500/50"
+              }`}
           />
         ))}
       </div>

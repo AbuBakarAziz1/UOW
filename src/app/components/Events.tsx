@@ -97,7 +97,7 @@ const Events: React.FC = () => {
             behavior: 'auto' // Use auto for smoother continuous movement
           });
         }
-      }, 50); // Very frequent updates for smooth movement
+      }, 50); 
     };
 
     // Start immediately
@@ -127,7 +127,7 @@ const Events: React.FC = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/70"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <h2 className="text-white font-extrabold text-5xl lg:text-6xl tracking-wider">
+                <h2 className="text-white font-extrabold text-4xl md:text-6xl tracking-wider">
                   LATEST EVENTS
                 </h2>
               </div>
