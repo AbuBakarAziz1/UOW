@@ -1,31 +1,50 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
-const faculties = [
+interface Department {
+  name: string;
+  id: string;
+  programs: string[];
+  description?: string;
+}
+
+interface Faculty {
+  name: string;
+  key: string;
+  departments: Department[];
+}
+
+const faculties: Faculty[] = [
   {
     name: "Basic Sciences",
     key: "basic",
     departments: [
       {
         name: "Biosciences",
+        id: "biosciences",
         programs: ["BS Biosciences", "MS Biosciences", "MS Biochemistry", "MS Biotechnology", "PhD Biosciences"],
       },
       {
         name: "Chemistry",
+        id: "chemistry",
         programs: ["BS Chemistry", "BS Applied Chemistry", "MS Inorganic Chemistry", "MS Organic Chemistry", "MS Physical Chemistry", "PhD Chemistry"],
       },
       {
         name: "Mathematics",
+        id: "mathematics",
         programs: ["BS Mathematics", "MS Mathematics", "PhD Mathematics"],
       },
       {
         name: "Physics",
+        id: "physics",
         programs: ["BS Physics", "MS Physics", "PhD Physics"],
       },
       {
         name: "Statistics",
+        id: "statistics",
         programs: ["BS Statistics", "MS Statistics"],
       },
     ],
@@ -36,6 +55,7 @@ const faculties = [
     departments: [
       {
         name: "Computer Science",
+        id: "computer-science",
         programs: ["BS Computer Science", "BS Artificial Intelligence", "BS Cyber Security", "BS Data Science", "MS Computer Science", "PhD Computer Science"],
         description: "The Department of Computer Science imparts quality education in the field of Computer and Information Technology. The Department offers the degrees of BS and MS and aspires to prepare top quality graduates for the job market by providing them with up-to-date education in Computer Science."
       },
@@ -47,6 +67,7 @@ const faculties = [
     departments: [
       {
         name: "Management Sciences",
+        id: "management-sciences",
         programs: ["Bachelor of Business Administration", "BS Accounting and Finance", "BS Business Analytics", "MS Management Sciences", "Master of Business Administration (1.5 Year)", "Master of Business Administration (2 Years)", "PhD Management Sciences"],
         description: "At the Department of Management Sciences, we believe that the reality of business and administration lies in the relationships and bonds built among human beings. Therefore, our academic programs focus upon knowledge and capacity building through fostering a positive relationship between faculty and students."
       },
@@ -58,26 +79,32 @@ const faculties = [
     departments: [
       {
         name: "Education",
+        id: "education",
         programs: ["BS Education", "MS Education", "PhD Education"],
       },
       {
         name: "English",
+        id: "english",
         programs: ["BS English", "MS English"],
       },
       {
         name: "Economics",
+        id: "economics",
         programs: ["BS Economics", "MS Economics", "PhD Economics"],
       },
       {
         name: "Islamic Studies",
+        id: "islamic-studies",
         programs: ["BS Islamic Studies", "MS Islamic Studies"],
       },
       {
         name: "Psychology", 
+        id: "psychology",
         programs: ["BS Psychology", "ADCP", "MS Psychology"],
       },
       {
         name: "Sociology",
+        id: "sociology",
         programs: ["BS Sociology"],
       },
     ],
@@ -88,26 +115,32 @@ const faculties = [
     departments: [
       {
         name: "Chemical Engineering",
+        id: "chemical-engineering",
         programs: ["BSc Chemical Engg", "MS Chemical Engg", "PhD Chemical Engg"],
       },
       {
         name: "Civil Engineering", 
+        id: "civil-engineering",
         programs: ["BSc Civil Engg", "MS Civil Engg", "MS Constrn Engg & Mgt"],
       },
       {
         name: "Electrical Engineering",
+        id: "electrical-engineering",
         programs: ["BSc Electrical Engg", "BS Computer Engg", "BS Software Engg", "MS Electrical Engg", "PhD Electrical Engg"],
       },
       {
         name: "Mechanical Engineering",
+        id: "mechanical-engineering",
         programs: ["BSc Mechanical Engg", "MS Mechanical Engg", "PhD Mechanical Engg"],
       },
       {
         name: "Mechatronics Engineering",
+        id: "mechatronics-engineering",
         programs: ["BSc Mechatronics Engg", "MS Mechatronics Engg"],
       },
        {
         name: "Software Engineering",
+        id: "software-engineering",
         programs: ["BSc Software Engg", "MS Software Engg"],
       },
     ],
@@ -197,8 +230,8 @@ const FacultyDepartments: React.FC = () => {
                         <div className="w-full lg:w-2/3 flex flex-col">
                           <span className="text-sm text-gray-500 tracking-wide mb-0">Department of</span>
                           <h3 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#0d5189] to-red-500  bg-clip-text text-transparent mb-4">{dept.name}</h3>
-                          {(dept as { description?: string }).description && (
-                                                        <p className="text-gray-700 leading-relaxed text-base">{(dept as { description?: string }).description}</p>
+                          {dept.description && (
+                            <p className="text-gray-700 leading-relaxed text-base">{dept.description}</p>
                           )}
                           <div className="mb-6">
                             <h4 className="text-lg font-semibold text-theme-blue mb-3">Programs Offered:</h4>
@@ -212,9 +245,12 @@ const FacultyDepartments: React.FC = () => {
                             </div>
                           </div>
                           <div className="flex justify-end">
-                            <button className="flex items-center gap-2 px-5 py-2 rounded-full bg-red-500 text-white text-sm font-bold shadow-lg hover:bg-theme-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-theme-blue">
+                            <Link 
+                              href={`/departments/${dept.id}`}
+                              className="flex items-center gap-2 px-5 py-2 rounded-full bg-red-500 text-white text-sm font-bold shadow-lg hover:bg-theme-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-theme-blue"
+                            >
                               Learn More <FaArrowRight className="text-sm" />
-                            </button>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -265,9 +301,12 @@ const FacultyDepartments: React.FC = () => {
                         </div>
                         {/* Button at bottom right */}
                         <div className="w-full px-4 pb-4 flex justify-end">
-                          <button className="flex items-center gap-2 px-5 py-2 rounded-full bg-red-500 text-white text-xs font-bold shadow hover:bg-theme-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-theme-blue">
+                          <Link 
+                            href={`/departments/${dept.id}`}
+                            className="flex items-center gap-2 px-5 py-2 rounded-full bg-red-500 text-white text-xs font-bold shadow hover:bg-theme-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-theme-blue"
+                          >
                             View Details <FaArrowRight className="text-xs" />
-                          </button>
+                          </Link>
                         </div>
                         {/* Decorative accent */}
                         <span className="absolute -top-4 -right-4 text-orange-200 text-4xl opacity-30">★</span>

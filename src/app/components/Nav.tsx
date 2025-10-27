@@ -36,26 +36,26 @@ const menuItems: MenuItem[] = [
     title: "About UW",
     href: "#",
     dropdown: [
-      {
-        title: "Overview",
-        href: "/about",
-        submenu: [
-          { title: "Mission & Vision", href: "/about/mission" },
-          { title: "History", href: "/about/history" },
-          { title: "Leadership", href: "/about/leadership" },
-        ],
-      },
+      // {
+      //   title: "Overview",
+      //   href: "/about",
+      //   submenu: [
+      //     { title: "Mission & Vision", href: "/about/mission" },
+      //     { title: "History", href: "/about/history" },
+      //     { title: "Leadership", href: "/about/leadership" },
+      //   ],
+      // },
       {
         title: "UW at a Glance",
         href: "/about",
       },
       {
         title: "Quality Policy",
-        href: "/about",
+        href: "/about/quality-policy",
       },
       {
         title: "Vision & Mission",
-        href: "/about",
+        href: "/about/mission-vision",
       },
       {
         title: "Organizational Structure",
@@ -65,29 +65,29 @@ const menuItems: MenuItem[] = [
         title: "Administration",
         href: "/about/administration",
         submenu: [
-          { title: "Chancellor", href: "/about/chancellor" },
-          { title: "Vice Chancellor", href: "/about/vice-chancellor" },
-          { title: "Chairman Board of Governors", href: "/about/board" },
+          { title: "Chancellor", href: "/about/leadership/chancellor" },
+          { title: "Vice Chancellor", href: "/about/leadership/vice-chancellor" },
+          { title: "Chairman Board of Governors", href: "/about/leadership/board" },
         ],
       },
       {
-        title: "Deans ",
+        title: "Deans",
         href: "/about/administration",
         submenu: [
-          { title: "Basic Sciences", href: "/about/basic-sciences" },
-          { title: "Computer Science", href: "/about/computer-science" },
-          { title: "Engineering", href: "/about/engineering" },
-           { title: "Management", href: "/about/management" },
-          { title: "Social Sciences & Humanities", href: "/about/humanities" }
+          { title: "Basic Sciences", href: "/about/leadership/dean-basic-sciences" },
+          { title: "Computer Science", href: "/about/leadership/dean-computer-science" },
+          { title: "Engineering", href: "/about/leadership/dean-engineering" },
+          { title: "Management", href: "/about/leadership/dean-management" },
+          { title: "Social Sciences & Humanities", href: "/about/leadership/dean-humanities" }
         ],
       },
       {
         title: "Picture Gallery",
-        href: "/about",
+        href: "/about/gallery",
       },
       {
         title: "Video Gallery",
-        href: "/about",
+        href: "/about/gallery",
       },
       {
         title: "The UW Act 2009",
@@ -99,17 +99,17 @@ const menuItems: MenuItem[] = [
       },
       {
         title: "Tender Notices",
-        href: "/about",
+        href: "/tender-notices",
       },
       
-      {
-        title: "Campus Life",
-        href: "/about/campus-life",
-        submenu: [
-          { title: "Student Life", href: "/about/student-life" },
-          { title: "Facilities", href: "/about/facilities" },
-        ],
-      },
+      // {
+      //   title: "Campus Life",
+      //   href: "/about/campus-life",
+      //   submenu: [
+      //     { title: "Student Life", href: "/about/student-life" },
+      //     { title: "Facilities", href: "/about/facilities" },
+      //   ],
+      // },
     ],
   },
   {
@@ -131,51 +131,49 @@ const menuItems: MenuItem[] = [
         title: "Faculty of Basic Sciences", 
         href: "/faculties/basic-sciences", 
         submenu: [
-          { title: "Department of Biosciences", href: "/about/biosciences" },
-          { title: "Department of Chemistry", href: "/about/chemistry" },
-          { title: "Department of Mathematics", href: "/about/mathematics" },
-          { title: "Department of Physics", href: "/about/physics" },
-          { title: "Department of Statistics", href: "/about/statistics" },
-          { title: "UW Lab Complex", href: "/about/lab-complex" },
+          { title: "Department of Biosciences", href: "/departments/biosciences" },
+          { title: "Department of Chemistry", href: "/departments/chemistry" },
+          { title: "Department of Mathematics", href: "/departments/mathematics" },
+          { title: "Department of Physics", href: "/departments/physics" },
+          { title: "Department of Statistics", href: "/departments/statistics" },
         ],
       },
       {
         title: "Faculty of Computer Science", 
         href: "/faculties/computer-science", 
         submenu: [
-          { title: "Department of Computer Science", href: "/about/computer-science" },
-          { title: "Department of Artificial Intelligence", href: "/about/artificial-intelligence" },
+          { title: "Department of Computer Science", href: "/departments/computer-science" },
+          { title: "Department of Artificial Intelligence", href: "/departments/artificial-intelligence" },
         ],
       },
       {
         title: "Faculty of Management Sciences", 
         href: "/faculties/management-sciences", 
         submenu: [
-          { title: "Department of Business Administration", href: "/about/business-administration" },
-          { title: "Department of Management Sciences", href: "/about/management-sciences" },
+          { title: "Department of Business Administration", href: "/departments/business-administration" },
+          { title: "Department of Management Sciences", href: "/departments/management-sciences" },
         ],
       },
       {
         title: "Faculty of Social Sciences & Humanities", 
         href: "/faculties/social-sciences-humanities", 
         submenu: [
-          { title: "Department of Education", href: "/about/education" },
-          { title: "Department of English", href: "/about/english" },
-          { title: "Department of Islamic Studies", href: "/about/islamic-studies" },
-          { title: "Department of Psychology", href: "/about/psychology" },
-          { title: "Department of Sociology", href: "/about/sociology" }
+          { title: "Department of Education", href: "/departments/education" },
+          { title: "Department of English", href: "/departments/english" },
+          { title: "Department of Islamic Studies", href: "/departments/islamic-studies" },
+          { title: "Department of Psychology", href: "/departments/psychology" },
+          { title: "Department of Sociology", href: "/departments/sociology" }
         ],
       },
       {
         title: "Faculty of Engineering", 
         href: "/faculties/engineering", 
         submenu: [
-          { title: "Department of Chemical Engineering", href: "/about/chemical-engineering" },
-          { title: "Department of Civil Engineering", href: "/about/civil-engineering" },
-          { title: "Department of Computer Science", href: "/about/computer-science" },
-          { title: "Department of Electrical Engineering", href: "/about/electrical-engineering" },
-          { title: "Department of Mechanical Engineering", href: "/about/mechanical-engineering" },
-          { title: "Department of Mechatronics", href: "/about/mechatronics" }
+          { title: "Department of Chemical Engineering", href: "/departments/chemical-engineering" },
+          { title: "Department of Civil Engineering", href: "/departments/civil-engineering" },
+          { title: "Department of Electrical Engineering", href: "/departments/electrical-engineering" },
+          { title: "Department of Mechanical Engineering", href: "/departments/mechanical-engineering" },
+          { title: "Department of Mechatronics Engineering", href: "/departments/mechatronics" }
         ],
       },
       

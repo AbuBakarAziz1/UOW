@@ -3,6 +3,9 @@ import Link from "next/link";
 import { FaHome, FaSearch, FaUniversity, FaBook, FaGraduationCap } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
+// Note: metadata export doesn't work in client components, 
+// but the page will still be properly handled by Next.js with noindex
+
 export default function NotFound() {
   const [mounted, setMounted] = useState(false);
   const [floatingElements, setFloatingElements] = useState<Array<{id: number, x: number, y: number, delay: number}>>([]);

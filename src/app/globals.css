@@ -8,6 +8,57 @@
 .bg-theme-blue { background-color: #0d5189 !important; }
 .bg-theme-orange { background-color: #fc9928 !important; }
 .text-theme-blue { color: #0d5189 !important; }
+
+.link-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.link-text {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.link-text-hover {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  display: inline-block;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  color: #0d5189;
+}
+
+.group:hover .link-text {
+  transform: translateY(-100%);
+}
+
+.group:hover .link-text-hover {
+  transform: translateY(-100%);
+}
+
+/* Mobile styles */
+.mobile-link-text-hover {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  display: inline-block;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  color: #fc9928;
+}
+
+.group:hover .mobile-link-text {
+  transform: translateY(-100%);
+}
+
+.group:hover .mobile-link-text-hover {
+  transform: translateY(-100%);
+}
 .text-theme-orange { color: #fc9928 !important; }
 .border-theme-blue { border-color: #0d5189 !important; }
 .border-theme-orange { border-color: #fc9928 !important; }

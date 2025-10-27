@@ -25,7 +25,7 @@ const InnerPageLayout: React.FC<InnerPageLayoutProps> = ({
       <Breadcrumb customItems={breadcrumbItems} />
       
       {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto px-3 py-4">
+      <div className="max-w-7xl mx-auto px-3 pt-2 pb-4 md:pb-16 ">
         <div className={`grid ${showSidebar ? 'grid-cols-1 lg:grid-cols-4' : 'grid-cols-1'} gap-8`}>
           
           {/* Sidebar */}
@@ -38,8 +38,8 @@ const InnerPageLayout: React.FC<InnerPageLayoutProps> = ({
           )}
           
           {/* Main Content */}
-          <div className={`${showSidebar ? 'lg:col-span-3' : 'col-span-1'} order-1 lg:order-2 ml-3`}>
-            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+          <div className={`${showSidebar ? 'lg:col-span-3' : 'col-span-1'} order-1 lg:order-2 ml-3 `}>
+            <div className="bg-white rounded-2xl shadow-xl border-t-3 border-sky-700 overflow-hidden ">
               {children}
             </div>
           </div>

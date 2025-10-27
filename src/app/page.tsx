@@ -12,6 +12,7 @@ import FacultyDepartments from "./components/FacultyDepartments";
 import Events from "./components/Events";
 import WelcomeModal from "./components/WelcomeModal";
 import { useState, useEffect } from "react";
+import { notifications } from "./lib/notifications";
 
 export default function Home() {
   const [showWelcomeModal, setShowWelcomeModal] = useState(false);
@@ -43,36 +44,15 @@ export default function Home() {
       <div className="absolute top-0 left-0 w-full z-30 overflow-hidden">
         <div className="bg-red-700 text-white py-1 px-6 text-sm font-bold">
           <div className="animate-marquee-ticker flex whitespace-nowrap">
-            {/* First copy of content */}
-            <span className="mr-36 flex items-center">
-              <FaBullhorn className="mr-2" />
-              Admissions Open! Apply now for Fall 2025 —{" "}
-              <Link href="/admissions" className="underline text-white">
-                Click here
-              </Link>
-            </span>
-            <span className="mr-36 flex items-center">
-              <FaBullhorn className="mr-2" />
-              University of wah remains closed from 22th Sep Onward —{" "}
-              <Link href="/admissions" className="underline text-white">
-                Click here
-              </Link>
-            </span>
-            {/* Second copy of content for seamless looping */}
-            <span className="mr-36 flex items-center">
-              <FaBullhorn className="mr-2" />
-              Admissions Open! Apply now for Fall 2025 —{" "}
-              <Link href="/admissions" className="underline text-white">
-                Click here
-              </Link>
-            </span>
-            <span className="mr-36 flex items-center">
-              <FaBullhorn className="mr-2" />
-              University of wah remains closed on 18th Sep —{" "}
-              <Link href="/admissions" className="underline text-white">
-                Click here
-              </Link>
-            </span>
+            {notifications.map((notification, index) => (
+              <span key={index} className="mr-36 flex items-center">
+                <FaBullhorn className="mr-2" />
+                {notification.message} — {" "}
+                <Link href={notification.link} className="underline text-white">
+                  {notification.linkText}
+                </Link>
+              </span>
+            ))}
           </div>
         </div>
       </div>
@@ -83,7 +63,7 @@ export default function Home() {
       </div>
 
       {/* Overlay Cards */}
-      <div className="relative -mt-2 md:-mt-5 flex flex-col md:flex-row justify-center px-2 md:px-4 pb-2 z-20">
+      <div className="relative -mt-2 md:-mt-5 flex flex-col md:flex-row justify-center px-2 md:px-4 z-20">
         <div className="bg-theme-blue text-white px-3 sm:px-4 md:px-6 py-4 md:pt-10 md:pb-3 shadow-lg transform hover:scale-102 transition max-w-md w-full flex flex-col">
           <div className="flex flex-col items-center flex-grow">
             <span className="mb-3 text-3xl sm:text-4xl md:text-5xl drop-shadow-lg">

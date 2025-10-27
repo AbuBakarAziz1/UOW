@@ -77,7 +77,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ customItems }) => {
     
     return (
         <div className="w-full ">
-            <div className="max-w-7xl mx-auto mt-6 px-4 py-2">
+            <div className="max-w-7xl mx-auto px-4 pt-4 pb-1">
                 <nav className="flex items-center space-x-1 text-sm">
                     {breadcrumbs.map((item, index) => {
                         const isLast = index === breadcrumbs.length - 1;

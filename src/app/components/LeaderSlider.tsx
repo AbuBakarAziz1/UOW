@@ -19,7 +19,7 @@ const leaders = [
     image: "/theme/images/directors/vicechancellor.jpg",
     message:
       "University of Wah is an HEC recognized private-sector university and chartered by Government of the Punjab. Since its inception in 2005...",
-    link: "/leadership/vicechancellor",
+    link: "/leadership/vice-chancellor",
   },
   {
     name: "Lt Gen Tahir Hameed Shah HI(M)",
@@ -27,7 +27,7 @@ const leaders = [
     image: "/theme/images/directors/vicechancellor.jpg",
     message:
       "Current era has witnessed a massive application of scientific knowledge that erupted in the last two centuries. Our lives have been irreversibly influenced by the technological advancements...",
-    link: "/leadership/chairman",
+    link: "/leadership/chairman-bog",
   },
 ];
 
