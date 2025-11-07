@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://uowedupk.vercel.app'),
+  metadataBase: new URL('https://uowedupk.site'),
   title: {
     default: 'University of Wah | Top Pakistani University for Higher Education',
     template: '%s | University of Wah'
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_PK',
-    url: 'https://uowedupk.vercel.app',
+    url: 'https://uowedupk.site',
     title: 'University of Wah | Top Pakistani University for Higher Education',
     description: 'Leading public sector university in Wah Cantt, Taxila (near Rawalpindi & Islamabad) offering undergraduate and postgraduate programs in Computer Science, Engineering, Basic Sciences, Management, and Social Sciences.',
     siteName: 'University of Wah',
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     // bing: 'your-bing-verification-code',
   },
   alternates: {
-    canonical: 'https://uowedupk.vercel.app',
+    canonical: 'https://uowedupk.site',
   },
 };
 

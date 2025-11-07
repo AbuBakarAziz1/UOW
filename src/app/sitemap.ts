@@ -2,15 +2,21 @@ import { MetadataRoute } from 'next'
 import { getAllDepartments } from '../lib/departmentsData'
 import { getAllProgramIds } from '../lib/programsData'
 import { leaders, deans } from '../lib/leadershipData'
+import { getAllNews } from './lib/newsDataOnly'
+import { getAllEvents } from './lib/eventsData'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://uowedupk.vercel.app'
+  const baseUrl = 'https://uowedupk.site'
   
   // Get all departments
   const departments = getAllDepartments()
   
   // Get all programs
   const programIds = getAllProgramIds()
+  
+  // Get all news articles and events
+  const newsArticles = getAllNews()
+  const events = getAllEvents()
   
   // Static routes with high priority
   const staticRoutes = [
@@ -150,10 +156,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]
 
+  // News routes
+  const newsRoutes = newsArticles.map((article) => ({
+    url: `${baseUrl}/news/${article.id}`,
+    lastModified: new Date(article.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // Event routes
+  const eventRoutes = events.map((event) => ({
+    url: `${baseUrl}/events/${event.id}`,
+    lastModified: new Date(event.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   return [
     ...staticRoutes,
     ...departmentRoutes,
     ...programRoutes,
     ...leadershipRoutes,
+    ...newsRoutes,
+    ...eventRoutes,
   ]
 }

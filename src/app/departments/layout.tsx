@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Departments - University of Wah',
     description: 'Browse all academic departments and their programs.',
-    url: 'https://uowedupk.vercel.app/departments',
+    url: 'https://uowedupk.site/departments',
   },
   alternates: {
-    canonical: 'https://uowedupk.vercel.app/departments',
+    canonical: 'https://uowedupk.site/departments',
   },
 };
 

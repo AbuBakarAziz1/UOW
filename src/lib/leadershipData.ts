@@ -12,9 +12,9 @@ export interface Leader {
 export const leaders: Leader[] = [
     {
         id: "chancellor",
-        name: "Lt Gen (R) Syed Muhammad Owais",
+        name: "Sardar Saleem Haider Khan",
         title: "Chancellor",
-        image: "/theme/images/directors/vicechancellor.jpg",
+        image: "/theme/images/directors/Chancellor.jpg",
         message: `It gives me immense pleasure to welcome you to the University of Wah (UW). The University of Wah is a private sector institution chartered by the Provincial Assembly of Punjab in 2009. The University is committed to providing quality education and fostering research excellence.
 
 The University offers undergraduate, graduate, and doctoral programs in various disciplines including Engineering, Computer Science, Management Sciences, and Basic Sciences. Our faculty members are highly qualified and dedicated to nurturing the intellectual growth of our students.
@@ -32,9 +32,9 @@ Best wishes for your success!`,
     },
     {
         id: "chairman-bog",
-        name: "Lt Gen (R) Naeem Khalid Lodhi",
+        name: "Lt Gen Tahir Hameed Shah HI(M)",
         title: "Chairman Board of Governors",
-        image: "/theme/images/directors/vicechancellor.jpg",
+        image: "/theme/images/directors/ViceChancellor.jpg",
         message: `I am honored to serve as the Chairman of the Board of Governors at the University of Wah. Our institution stands as a beacon of quality education and research in Pakistan.
 
 The Board of Governors is committed to ensuring that UW maintains the highest standards of academic excellence and governance. We continuously work to improve our infrastructure, academic programs, and research capabilities.
@@ -54,7 +54,7 @@ Wishing you all the best in your academic journey!`,
         id: "vice-chancellor",
         name: "Prof. Dr. Jameel-Un Nabi",
         title: "Vice Chancellor",
-        image: "/theme/images/directors/vicechancellor.jpg",
+        image: "/theme/images/directors/ViceChancellor.jpg",
         message: `Welcome to the University of Wah! As the Vice Chancellor, I am delighted to share with you the exciting opportunities that await you at our institution.
 
 The University of Wah is dedicated to providing a transformative educational experience that prepares students for success in an increasingly complex and interconnected world. Our commitment to academic excellence, research innovation, and community engagement sets us apart.
@@ -77,9 +77,9 @@ I invite you to explore the opportunities at UW and become part of our dynamic c
 export const deans: Leader[] = [
     {
         id: "dean-basic-sciences",
-        name: "Prof. Dr. [Name]",
+        name: "Prof. Dr. Uzma Ghazanfar",
         title: "Dean Basic Sciences",
-        image: "/theme/images/directors/vicechancellor.jpg",
+        image: "/theme/images/directors/ViceChancellor.jpg",
         message: `Welcome to the Faculty of Basic Sciences at the University of Wah. Our faculty is committed to providing quality education in fundamental sciences including Mathematics, Physics, Chemistry, Biology, and Statistics.
 
 We focus on developing strong analytical and research skills in our students, preparing them for careers in academia, industry, and research. Our state-of-the-art laboratories and experienced faculty ensure an excellent learning environment.
@@ -95,9 +95,9 @@ I invite you to explore the exciting opportunities available in our faculty and 
     },
     {
         id: "dean-computer-science",
-        name: "Prof. Dr. Abu Bakar Aziz",
+        name: "Prof. Dr. Syed Waqas Hassan",
         title: "Dean Computer Science",
-        image: "/theme/images/directors/vicechancellor.jpg",
+        image: "/theme/images/directors/ViceChancellor.jpg",
         message: `Welcome to the Faculty of Computer Science at the University of Wah. In this rapidly evolving digital age, our faculty is at the forefront of computer science education and research.
 
 We offer comprehensive programs in Computer Science, Artificial Intelligence, Cyber Security, and Software Engineering. Our curriculum is designed to meet international standards and industry requirements.
@@ -113,9 +113,9 @@ Join us to embark on an exciting journey in the world of technology and innovati
     },
     {
         id: "dean-engineering",
-        name: "Prof. Dr. [Name]",
+        name: "Prof. Dr. Adnan Tariq",
         title: "Dean Engineering",
-        image: "/theme/images/directors/vicechancellor.jpg",
+        image: "/theme/images/directors/ViceChancellor.jpg",
         message: `The Faculty of Engineering at the University of Wah is dedicated to producing competent engineers who can address the technological challenges of the 21st century.
 
 Our programs in Civil, Electrical, Mechanical, Chemical, and Mechatronics Engineering are accredited by the Pakistan Engineering Council (PEC) and follow international standards.
@@ -131,9 +131,9 @@ I encourage prospective students to join our faculty and be part of building Pak
     },
     {
         id: "dean-management",
-        name: "Prof. Dr. [Name]",
+        name: "Prof. Dr. Khurram Shahzad",
         title: "Dean Management Sciences",
-        image: "/theme/images/directors/vicechancellor.jpg",
+        image: "/theme/images/directors/ViceChancellor.jpg",
         message: `Welcome to the Faculty of Management Sciences at the University of Wah. Our faculty is committed to developing future business leaders and entrepreneurs.
 
 We offer programs in Business Administration, Marketing, Finance, and Human Resource Management. Our curriculum combines theoretical knowledge with practical business skills through case studies, projects, and industry interactions.
@@ -149,9 +149,9 @@ The Faculty of Management Sciences provides excellent opportunities for networki
     },
     {
         id: "dean-humanities",
-        name: "Prof. Dr. [Name]",
+        name: "Prof. Dr. Asim Karim",
         title: "Dean Social Sciences & Humanities",
-        image: "/theme/images/directors/vicechancellor.jpg",
+        image: "/theme/images/directors/ViceChancellor.jpg",
         message: `The Faculty of Social Sciences and Humanities at the University of Wah offers diverse programs that explore human society, culture, and behavior.
 
 Our faculty includes departments of English, Education, Psychology, and Islamic Studies. We focus on developing critical thinking, communication skills, and cultural awareness.

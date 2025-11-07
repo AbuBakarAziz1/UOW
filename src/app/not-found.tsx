@@ -95,44 +95,14 @@ export default function NotFound() {
           </Link>
           
           <Link 
-            href="/search"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-theme-blue border-2 border-theme-blue rounded-full font-bold text-lg shadow-lg hover:bg-theme-blue hover:text-white transition-all duration-300 transform hover:scale-105"
+            href="/"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-[#0d5189] border-2 border-theme-blue rounded-full font-bold text-lg shadow-lg hover:bg-[#0d5189] hover:text-white transition-all duration-300 transform hover:scale-105"
           >
             <FaSearch className="group-hover:animate-spin" />
             Search Site
           </Link>
         </div>
 
-        {/* University branding */}
-        <div className="mt-12 animate-fade-in-up" style={{animationDelay: '1.2s'}}>
-          <p className="text-sm text-gray-500 mb-2">Lost but still part of the</p>
-          <h3 className="text-xl font-bold text-theme-blue">
-            University of <span className="text-red-600">Wah</span> Family
-          </h3>
-        </div>
-
-        {/* Popular links */}
-        <div className="mt-8 animate-fade-in-up" style={{animationDelay: '1.5s'}}>
-          <p className="text-sm text-gray-600 mb-4">Maybe you were looking for:</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              { name: "Admissions", href: "/admissions" },
-              { name: "Academics", href: "/academics" },
-              { name: "Research", href: "/research" },
-              { name: "About Us", href: "/about" },
-              { name: "Contact", href: "/contact" }
-            ].map((link, index) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="px-4 py-2 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-theme-orange hover:text-white transition-all duration-300 transform hover:scale-105"
-                style={{animationDelay: `${1.8 + index * 0.1}s`}}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Animated background elements */}

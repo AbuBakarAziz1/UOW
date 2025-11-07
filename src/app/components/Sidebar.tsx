@@ -80,10 +80,8 @@ const navigationData = {
     title: "News & Events",
     icon: FaNewspaper,
     links: [
-      { href: "/news", label: "Latest News", icon: FaNewspaper },
-      { href: "/news/events", label: "Upcoming Events", icon: FaCalendarAlt },
-      { href: "/news/announcements", label: "Announcements", icon: FaInfoCircle },
-      { href: "/news/press", label: "Press Releases", icon: FaFileAlt }
+      { href: "/news", label: "News & Announcements", icon: FaNewspaper },
+      { href: "/events", label: "Events", icon: FaCalendarAlt }
     ]
   },
   facilities: {

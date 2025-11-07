@@ -4,11 +4,11 @@ export default function StructuredData() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "@id": "https://uowedupk.vercel.app/#organization",
+    "@id": "https://uowedupk.site/#organization",
     "name": "University of Wah",
     "alternateName": ["UOW", "UW", "University of Wah Pakistan"],
-    "url": "https://uowedupk.vercel.app",
-    "logo": "https://uowedupk.vercel.app/theme/images/logo.png",
+    "url": "https://uowedupk.site",
+    "logo": "https://uowedupk.site/theme/images/logo.png",
     "description": "Leading public sector university in Wah Cantt, Taxila (near Rawalpindi & Islamabad) offering undergraduate and postgraduate programs in Computer Science, Engineering, Basic Sciences, Management, and Social Sciences.",
     "address": {
       "@type": "PostalAddress",
@@ -59,18 +59,18 @@ export default function StructuredData() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://uowedupk.vercel.app/#website",
-    "url": "https://uowedupk.vercel.app",
+    "@id": "https://uowedupk.site/#website",
+    "url": "https://uowedupk.site",
     "name": "University of Wah",
     "description": "Official website of University of Wah",
     "publisher": {
-      "@id": "https://uowedupk.vercel.app/#organization"
+      "@id": "https://uowedupk.site/#organization"
     },
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://uowedupk.vercel.app/search?q={search_term_string}"
+        "urlTemplate": "https://uowedupk.site/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }

@@ -10,46 +10,62 @@ import MasonryFacilities from "./components/MasonryFacilities";
 import LeaderSlider from "./components/LeaderSlider";
 import FacultyDepartments from "./components/FacultyDepartments";
 import Events from "./components/Events";
-import WelcomeModal from "./components/WelcomeModal";
+import ConfigurableModal from "./components/ConfigurableModal";
 import { useState, useEffect } from "react";
-import { notifications } from "./lib/notifications";
+import { getAllNews } from "./lib/newsDataOnly";
+import { getActiveModal, hasModalBeenDismissed, dismissModal } from "./lib/modalConfig";
 
 export default function Home() {
-  const [showWelcomeModal, setShowWelcomeModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const activeModal = getActiveModal();
+  
+  // Get only latest news for ticker (no events)
+  const latestNews = getAllNews().slice(0, 6);
 
   useEffect(() => {
-    // Check if user has already seen the modal
-    const hasSeenModal = localStorage.getItem('uw-welcome-modal-dismissed');
-    
-    // Show modal only if user hasn't dismissed it before
-    if (!hasSeenModal) {
-      // Delay showing modal slightly to allow page to load
+    // Check if there's an active modal and if it hasn't been dismissed
+    if (activeModal && !hasModalBeenDismissed(activeModal.id)) {
       const timer = setTimeout(() => {
-        setShowWelcomeModal(true);
-      }, 400); // 1.5 second delay
+        setShowModal(true);
+      }, 400);
       
       return () => clearTimeout(timer);
     }
-  }, []);
+  }, [activeModal]);
 
   const handleCloseModal = () => {
-    setShowWelcomeModal(false);
+    setShowModal(false);
+    // Don't dismiss permanently - modal will show again on next page load
+  };
+
+  const handleDismissModal = () => {
+    setShowModal(false);
+    if (activeModal) {
+      dismissModal(activeModal.id);
+    }
   };
   return (
     <div className="relative">
-      {/* Welcome Modal */}
-      <WelcomeModal isOpen={showWelcomeModal} onClose={handleCloseModal} />
+      {/* Configurable Modal */}
+      {activeModal && (
+        <ConfigurableModal 
+          config={activeModal}
+          isOpen={showModal} 
+          onClose={handleCloseModal}
+          onDismissPermanently={handleDismissModal}
+        />
+      )}
       
       {/* Sliding notification bar */}
       <div className="absolute top-0 left-0 w-full z-30 overflow-hidden">
         <div className="bg-red-700 text-white py-1 px-6 text-sm font-bold">
           <div className="animate-marquee-ticker flex whitespace-nowrap">
-            {notifications.map((notification, index) => (
-              <span key={index} className="mr-36 flex items-center">
+            {latestNews.map((article) => (
+              <span key={article.id} className="mr-36 flex items-center">
                 <FaBullhorn className="mr-2" />
-                {notification.message} — {" "}
-                <Link href={notification.link} className="underline text-white">
-                  {notification.linkText}
+                {article.title} — {"  "}
+                <Link href={`/news/${article.id}`} className="ml-1 underline italic text-white hover:text-orange-300">
+                   More Info
                 </Link>
               </span>
             ))}

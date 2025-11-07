@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: 'https://uowedupk.vercel.app/sitemap.xml',
+    sitemap: 'https://uowedupk.site/sitemap.xml',
   }
 }

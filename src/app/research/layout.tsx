@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Research - University of Wah',
     description: 'Discover research opportunities and innovation at UOW.',
-    url: 'https://uowedupk.vercel.app/research',
+    url: 'https://uowedupk.site/research',
   },
   alternates: {
-    canonical: 'https://uowedupk.vercel.app/research',
+    canonical: 'https://uowedupk.site/research',
   },
 };
 

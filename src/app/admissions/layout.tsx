@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Admissions - University of Wah',
     description: 'Admissions open for undergraduate and postgraduate programs. Apply online now.',
-    url: 'https://uowedupk.vercel.app/admissions',
+    url: 'https://uowedupk.site/admissions',
   },
   alternates: {
-    canonical: 'https://uowedupk.vercel.app/admissions',
+    canonical: 'https://uowedupk.site/admissions',
   },
 };
 

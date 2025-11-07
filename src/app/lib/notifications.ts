@@ -11,18 +11,18 @@ export const notifications: Notification[] = [
     linkText: "Click here",
   },
   {
-    message: "University of Wah remains closed from 22nd Sep onward",
+    message: "13th Convocation on 27th November 2025",
     link: "/admissions",
     linkText: "Click here",
   },
   {
-    message: "University of Wah remains closed on 18th Sep",
+    message: "Admissions Open! Apply now for Fall 2025",
     link: "/admissions",
     linkText: "Click here",
   },
 
    {
-    message: "University of Wah remains closed on 18th Sep",
+    message: "13th Convocation on 27th November 2025",
     link: "/admissions",
     linkText: "Click here",
   },
