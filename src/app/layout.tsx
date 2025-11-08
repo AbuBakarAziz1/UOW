@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://uowedupk.site'),
   title: {
-    default: 'University of Wah | Top Pakistani University for Higher Education',
+    default: 'University of Wah | Quality Education for All',
     template: '%s | University of Wah'
   },
   description: 'University of Wah (UOW) - Leading public sector university in Wah Cantt, Taxila, near Rawalpindi & Islamabad. Offering undergraduate and postgraduate programs in Computer Science, Engineering, Basic Sciences, Management, and Social Sciences. Admissions open.',
@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     'UOW Pakistan',
     'UW Pakistan',
     'UOW',
+    'UW',
+    'Wah University',
+    'Taxila University',
     'Pakistani University',
     'Higher Education Pakistan',
     'Wah Cantt University',
@@ -67,12 +70,12 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_PK',
     url: 'https://uowedupk.site',
-    title: 'University of Wah | Top Pakistani University for Higher Education',
+    title: 'University of Wah | Quality Education for All',
     description: 'Leading public sector university in Wah Cantt, Taxila (near Rawalpindi & Islamabad) offering undergraduate and postgraduate programs in Computer Science, Engineering, Basic Sciences, Management, and Social Sciences.',
     siteName: 'University of Wah',
     images: [
       {
-        url: '/theme/images/og-image.jpg',
+        url: '/theme/images/uowlogo.jpg',
         width: 1200,
         height: 630,
         alt: 'University of Wah Campus',
@@ -115,13 +118,16 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <meta
+          name="description"
+          content="University of Wah (UOW) - Leading public sector university in Wah Cantt, Taxila, near Rawalpindi & Islamabad. Offering undergraduate and postgraduate programs in Computer Science, Engineering, Basic Sciences, Management, and Social Sciences."
+        />
         <StructuredData />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased custom-scrollbar`}>
 
         <TopBar />
         <Nav />
-
 
         <main className="flex-1 w-full">
           {children}

@@ -8,7 +8,7 @@ const leaders = [
   {
     name: "Sardar Saleem Haider Khan",
     title: "Chancellor",
-    image: "/theme/images/directors/chancellor.jpg",
+    image: "/theme/images/directors/Chancellor.jpg",
     message:
       "It is matter of great satisfaction for me as chancellor to note steady evolution of University of Wah as premier institution of higher education and professional knowledge in Wah cantt...",
     link: "/leadership/chancellor",
@@ -16,7 +16,7 @@ const leaders = [
   {
     name: "Prof. Dr. Jameel-Un Nabi",
     title: "Vice Chancellor",
-    image: "/theme/images/directors/vicechancellor.jpg",
+    image: "/theme/images/directors/ViceChancellor.jpg",
     message:
       "University of Wah is an HEC recognized private-sector university and chartered by Government of the Punjab. Since its inception in 2005...",
     link: "/leadership/vice-chancellor",
@@ -24,7 +24,7 @@ const leaders = [
   {
     name: "Lt Gen Tahir Hameed Shah HI(M)",
     title: "Chairman Board of Governors",
-    image: "/theme/images/directors/vicechancellor.jpg",
+    image: "/theme/images/directors/ViceChancellor.jpg",
     message:
       "Current era has witnessed a massive application of scientific knowledge that erupted in the last two centuries. Our lives have been irreversibly influenced by the technological advancements...",
     link: "/leadership/chairman-bog",

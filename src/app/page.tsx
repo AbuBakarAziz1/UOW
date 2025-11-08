@@ -23,7 +23,6 @@ export default function Home() {
   const latestNews = getAllNews().slice(0, 6);
 
   useEffect(() => {
-    // Check if there's an active modal and if it hasn't been dismissed
     if (activeModal && !hasModalBeenDismissed(activeModal.id)) {
       const timer = setTimeout(() => {
         setShowModal(true);
@@ -123,8 +122,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
+      
       {/* Welcome Section */}
       <div className="relative bg-white py-16 px-4 overflow-hidden" style={{ backgroundImage: 'url(/theme/images/footerBackground.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/95 pointer-events-none"></div>
