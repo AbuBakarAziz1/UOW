@@ -20,12 +20,12 @@ export interface ModalConfig {
 export const modalConfigs: ModalConfig[] = [
   {
     id: 'admissions-fall-2025',
-    enabled: false, // Set to false to hide this modal
+    enabled: true, // Set to false to hide this modal
     type: 'admissions',
     title: 'Admissions Open!',
     subtitle: 'Fall 2025 Semester',
     description: 'Apply now for undergraduate and postgraduate programs. Limited seats available!',
-    backgroundImage: '/theme/images/admissions-bg.jpg', // Optional background
+    backgroundImage: '/theme/images/alerts/13thconvocation.jpg', // Optional background
     link: {
       url: '/admissions',
       text: 'Apply Now'
@@ -35,7 +35,7 @@ export const modalConfigs: ModalConfig[] = [
   },
   {
     id: 'convocation-2025',
-    enabled: true, // Set to true to show this modal
+    enabled: false, // Set to true to show this modal
     type: 'convocation',
     title: '13th Convocation Ceremony',
     subtitle: 'November 27, 2025',

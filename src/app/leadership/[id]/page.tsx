@@ -39,7 +39,7 @@ export default function LeadershipProfile() {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
                     {/* Left - Image */}
                     <div className="lg:col-span-2">
-                        <div className="relative rounded-xl overflow-hidden shadow-2xl p-1 border-1 border-orange-500 border-dashed">
+                        <div className="relative rounded-xl overflow-hidden shadow-2xl p-1 border-1 border-black border-dashed">
                             <Image
                                 src={leader.image}
                                 alt={leader.name}

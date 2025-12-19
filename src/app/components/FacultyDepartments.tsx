@@ -189,7 +189,7 @@ const FacultyDepartments: React.FC = () => {
 
   return (
     <section className="w-full py-16 bg-gradient-to-r from-blue-50 via-orange-50 to-blue-100">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-theme-blue mb-8 text-center">Faculties & <span className="text-red-600">Departments</span></h2>
         <p className="text-center text-gray-700 mb-6">University of Wah has 18 departments in five faculties. Click for details of the departments under their faculties.</p>
         {/* Faculties navbar */}
@@ -270,7 +270,7 @@ const FacultyDepartments: React.FC = () => {
                     const originalIdx = idx % currentFaculty.departments.length;
                     // Sample images for departments
                     const sampleImages = [
-                      "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80", // biosciences
+                      "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80", // biosciences
                       "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80", // chemistry
                       "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80", // mathematics
                       "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80", // physics

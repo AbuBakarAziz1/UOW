@@ -10,7 +10,7 @@ export default function footer() {
             {/* Footer */}
             <footer className="bg-gray-900 border-t-2 border-orange-600 relative overflow-hidden layer-overlay" style={{ backgroundImage: 'url(/theme/images/footerBackground.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="absolute inset-0 bg-black bg-opacity-50 mix-blend-multiply -z-10"></div>
-                <div className="mx-auto max-w-screen-xl px-4 pt-6 pb-4 sm:px-6 lg:px-8 lg:pt-12 ">
+                <div className="mx-auto container px-4 pt-6 pb-4 sm:px-6 lg:px-8 lg:pt-12 ">
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
                         <div>
                             <div className="flex justify-center text-teal-300 sm:justify-start">
@@ -332,6 +332,19 @@ export default function footer() {
                             </p>
                         </div>
                     </div>
+                </div>
+                <div className="flex justify-center items-center w-full py-6">
+                    <h4
+                        className="
+                        text-5xl font-extrabold 
+                        bg-[url('/theme/images/footerBackground.jpg')]
+                        bg-cover bg-repeat-x 
+                        bg-clip-text text-transparent 
+                        animate-scrollBg
+                        "
+                    >
+                        University of Wah
+                    </h4>
                 </div>
             </footer>
 

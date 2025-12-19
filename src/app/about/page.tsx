@@ -48,18 +48,29 @@ export default function About() {
 
   return (
     <InnerPageLayout section="about">
+
       {/* Hero */}
-      <div className="relative bg-gray-50">
-        <div className="relative h-36 md:h-48 lg:h-64 bg-cover bg-center" style={{ backgroundImage: `url('https://www.uow.edu.pk/Content/theme/images/web/about/UWGlance1.jpg')` }}>
-          <div className="absolute inset-0 bg-gradient-to-r from-sky-900/60 to-orange-400/30"></div>
-          <div className="relative z-10 max-w-7xl mx-auto h-full flex items-center px-6">
-            <div className="text-white">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-500 to-white bg-clip-text text-transparent">University of Wah</h1>
-              <p className="mt-2 text-md md:text-base max-w-2xl italic text-orange-200">Quality Education for all</p>
-            </div>
-          </div>
-        </div>
+<div className="relative bg-gray-50">
+  <div
+    className="relative h-36 md:h-48 lg:h-64 bg-cover bg-center"
+    style={{ backgroundImage: `url('https://www.uow.edu.pk/Content/theme/images/web/about/UWGlance1.jpg')` }}
+  >
+    {/* Stronger dark overlay */}
+    <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-black/40"></div>
+
+    <div className="relative z-10 max-w-7xl mx-auto h-full flex items-center px-6">
+      <div className="text-white drop-shadow-lg">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent drop-shadow-xl">
+          University of Wah
+        </h1>
+        <p className="mt-1 text-md md:text-base max-w-2xl italic text-orange-200 drop-shadow-md">
+          Quality Education for all
+        </p>
       </div>
+    </div>
+  </div>
+</div>
+
 
       {/* Lead Text */}
       <div className="max-w-7xl mx-auto px-8 py-6">
@@ -72,7 +83,7 @@ export default function About() {
           <p className="text-gray-700 leading-relaxed mb-4 text-normal text-justify">{lead}</p>
 
           <div className="prose max-w-none text-gray-700">
-            <p className="text-normal text-justify mb-2">
+            <p className="text-normal text-justify leading-relaxed mb-2">
               The University is offering 4-Years Bachelors, 2 years MPhil/MS and 3 years PhD Programs in the afore-mentioned disciplines. Mashal Degree College is its nursery of female students. UW is one of the few universities of Pakistan where female representation (students and faculty) exceeds 50%. Wah Engineering College offers BSc Engineering programs in the fields of Civil, Chemical, Electrical, Mechanical and Mechatronics Engineering and BS Engineering Technology programs in the fields of Chemical, Civil, Electrical, Mechanical, Mechatronics and Petroleum. The college also offers MS in Chemical, Construction Engineering & Management, Electrical, Mechanical and Mechatronics and PhD in Electrical and Mechanical Engineering.
             </p>
           </div>
@@ -169,7 +180,7 @@ export default function About() {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-gradient-to-r from-blue-100 via-sky-100 to-orange-100 rounded-xl p-8 shadow-lg border border-gray-100">
+        <div className="bg-gradient-to-r from-blue-100 via-sky-100 to-orange-100 rounded-xl p-6 shadow-lg border border-gray-100">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-sky-900 via-sky-700 to-red-600 bg-clip-text text-transparent">
               Contact Us

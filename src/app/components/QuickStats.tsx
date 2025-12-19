@@ -78,12 +78,12 @@ const QuickStats: React.FC = () => {
     return (
     <section ref={ref as React.RefObject<HTMLDivElement>} className="w-full py-10 sm:py-14 md:py-16 bg-gradient-to-r from-blue-300 via-orange-200 to-red-400">
 
-            <div className="max-w-5xl mx-auto text-center mb-8 sm:mb-12 px-2">
+            <div className="max-w-6xl mx-auto text-center mb-8 sm:mb-12 px-2">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-theme-blue drop-shadow-lg">
                     Quick <span className="text-red-500">Stats</span>
                 </h2>
             </div>
-            <div className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 text-center justify-center px-4 md:px-2">
+            <div className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 text-center justify-center px-2 md:px-2">
                 {stats.map((stat, i) => (
                     <StatItem key={stat.label} stat={stat} index={i} inView={inView} />
                 ))}

@@ -5,7 +5,7 @@ const links = [
   {
     href: "https://facebook.com",
     label: "Facebook",
-    hover: "text-blue-600",
+    hover: "hover:text-blue-600",
     title: "Follow us on Facebook",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 512 512">
@@ -16,7 +16,7 @@ const links = [
   {
     href: "https://twitter.com",
     label: "Twitter",
-    hover: "text-gray-900",
+    hover: "hover:text-gray-900",
     title: "Follow us on X",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 512 512">
@@ -27,7 +27,7 @@ const links = [
   {
     href: "https://google.com",
     label: "Google",
-    hover: "text-red-600",
+    hover: "hover:text-red-600",
     title: "Reach us on Gmail",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 512 512">
@@ -38,7 +38,7 @@ const links = [
   {
     href: "https://instagram.com",
     label: "Instagram",
-    hover: "text-pink-600",
+    hover: "hover:text-pink-600",
     title: "Follow us on Instagram",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 512 512">
@@ -49,7 +49,7 @@ const links = [
   {
     href: "https://linkedin.com",
     label: "LinkedIn",
-    hover: "text-blue-400",
+    hover: "hover:text-blue-400",
     title: "Follow us on LinkedIn",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 512 512">

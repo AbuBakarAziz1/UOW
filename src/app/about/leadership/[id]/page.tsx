@@ -40,7 +40,7 @@ export default function LeadershipProfile() {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
                     {/* Left - Image */}
                     <div className="lg:col-span-2">
-                        <div className="relative rounded-xl overflow-hidden shadow-2xl p-1 border-1 border-orange-500 border-dashed">
+                        <div className="relative rounded-xl overflow-hidden shadow-2xl p-1 border-1 border-gray-500 border-dashed">
                             <Image
                                 src={leader.image}
                                 alt={leader.name}
@@ -72,10 +72,10 @@ export default function LeadershipProfile() {
                         </h3>
 
                         {/* Decorative Border Line */}
-                        <div className="w-24 h-1.5 bg-gradient-to-r from-theme-blue via-theme-orange to-red-600 rounded-full mb-6"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-theme-blue via-theme-orange to-red-600 rounded-full mb-6"></div>
 
                         {/* Qualifications */}
-                        {leader.qualifications && (
+                        {/* {leader.qualifications && (
                             <div className="mb-8">
                                 <h4 className="text-lg font-bold text-theme-blue mb-4 flex items-center gap-2">
                                     <span className="w-2 h-2 bg-theme-orange rounded-full"></span>
@@ -90,7 +90,7 @@ export default function LeadershipProfile() {
                                     ))}
                                 </ul>
                             </div>
-                        )}
+                        )} */}
 
                         {/* Contact Info */}
                         {(leader.email || leader.phone) && (

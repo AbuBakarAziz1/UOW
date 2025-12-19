@@ -65,10 +65,10 @@ export default function DepartmentPage() {
             {/* Main Content Card - Subtle Overlap */}
             <div className="max-w-7xl mx-auto px-3 relative">
                 <div className="bg-white rounded-xl shadow-2xl -mt-4 md:-mt-6 border-t-2 border-orange-400 relative z-10">
-                    <div className="p-8 md:p-12 lg:p-8">
+                    <div className="px-6 py-4 md:px-8 md:py-4 lg:px-8 lg:py-4">
 
                         {/* Description */}
-                        <section className="mb-8">
+                        <section className="mb-6">
                             <h2 className="text-2xl text-theme-blue font-bold mb-4">{department.name}</h2>
                             <div className="transition-shadow duration-300">
                                 {department.description.map((para, index) => (
@@ -83,7 +83,7 @@ export default function DepartmentPage() {
                         </section>
 
                         {/* Programs Offered */}
-                        <section className="mb-8" aria-labelledby="programs-heading">
+                        <section className="mb-6" aria-labelledby="programs-heading">
                             <h2 id="programs-heading" className="text-2xl font-bold mb-4">
                                 <span className="text-theme-blue">Programs</span>{" "}
                                 <span className="text-red-600">Offered</span>
@@ -183,7 +183,7 @@ export default function DepartmentPage() {
             </div>
 
             {/* Bottom Spacing */}
-            <div className="h-12" />
+            <div className="h-6" />
         </InnerPageLayout>
     );
 }

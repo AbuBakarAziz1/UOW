@@ -14,6 +14,8 @@ import ConfigurableModal from "./components/ConfigurableModal";
 import { useState, useEffect } from "react";
 import { getAllNews } from "./lib/newsDataOnly";
 import { getActiveModal, hasModalBeenDismissed, dismissModal } from "./lib/modalConfig";
+import ResearchInnovation from "./components/ResearchInnovation";
+import OverlayCards from "./components/OverlayCards";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -78,7 +80,8 @@ export default function Home() {
       </div>
 
       {/* Overlay Cards */}
-      <div className="relative -mt-2 md:-mt-5 flex flex-col md:flex-row justify-center px-2 md:px-4 z-20">
+      <OverlayCards />
+      {/* <div className="relative -mt-2 md:-mt-5 flex flex-col md:flex-row justify-center px-2 md:px-4 z-20">
         <div className="bg-theme-blue text-white px-3 sm:px-4 md:px-6 py-4 md:pt-10 md:pb-3 shadow-lg transform hover:scale-102 transition max-w-md w-full flex flex-col">
           <div className="flex flex-col items-center flex-grow">
             <span className="mb-3 text-3xl sm:text-4xl md:text-5xl drop-shadow-lg">
@@ -121,7 +124,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
       
       {/* Welcome Section */}
       <div className="relative bg-white py-16 px-4 overflow-hidden" style={{ backgroundImage: 'url(/theme/images/footerBackground.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -152,6 +155,8 @@ export default function Home() {
       <LeaderSlider />
 
       <Events />
+
+      <ResearchInnovation />
 
       <MasonryFacilities />
 

@@ -322,6 +322,20 @@ body {
   }
 }
 
+@keyframes scrollBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -500px 0;
+  }
+}
+
+.animate-scrollBg {
+  animation: scrollBg 20s linear infinite;
+}
+
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
